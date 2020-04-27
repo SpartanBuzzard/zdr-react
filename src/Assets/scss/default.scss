@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    width: 100%;
+}
+nav {
+    #menu {
+        border-image: 
+    linear-gradient(
+      to bottom, 
+      red, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+    }
+}
+
+#cart-link:hover {
+    #mini-cart {
+        display: block;
+    }
+}
+#mini-cart {
+    display: none;
+    z-index: 100;
+    position: absolute;
+    background-color: white;
+    border: .5px solid rgb(92, 92, 141);
+    box-shadow: 2px 2px 10px #ccc;
+    padding: .5em;
+    width: 300px;
+    max-height: 300px;
+    overflow-y: scroll;
+    ul {
+        list-style: none;
+    }
+    .mini-cart-item {
+        width: 100%;
+        border: 1px solid #ccc;
+        margin-bottom: .5em;
+        img {
+            width: 50px;
+            height: auto;
+        }
+        .name {
+            border-bottom: 2px solid gold;
+            text-align: center;
+        }
+        .stats {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 100%;
+            margin: .25em;
+        }
+    }
+}
+
+//RESUPPLY PAGE
+#searchbar {
+    padding: 2em;
+    border: 1px solid black;
+}
+.pagination {
+    .invisible-link {
+        display: none !important;
+    }
+}
+#product-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-top: 2em;
+}
+.product {
+    // flex-basis: 200px;
+    width: 22%;
+    height: auto;
+    min-width: 200px;
+    position: relative;
+    display: block;
+    box-sizing: border-box;
+    border: 1px solid black;
+    border-radius: 2px;
+    box-shadow: 5px 3px 3px gray, -5px 3px 3px gray;
+    padding: 5px;
+    margin-bottom: 20px;
+    text-align: center;
+    .name {
+        border-bottom: 1px solid black;
+        box-shadow: 0 2px 2px -2px #17A2B8;
+        margin-bottom: 5px;
+        height: 50px;
+    }
+    .price {
+        color: green;
+        font-style: italic;
+        &:before { //insert dollar sign before all prices
+            content: "$"
+        }
+    }
+    .image-div {
+        position: relative;
+        width:100%;
+    }
+    .image {
+        width: 100px;
+        margin: 1em 1em 3.5em 1em;
+        // margin-bottom: 2.5em + 1em;
+    }
+    .inputs {
+        width: 100%;
+        box-sizing: border-box;
+        position: absolute;
+        bottom: 5px;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        span {
+            display: flex;
+        }
+        select, button {
+           height: 2.5em;
+        }
+        select {
+            margin-right: 4px;
+            width: 3em;
+            text-align: center;
+        }
+    }
+    .stock-alert {
+        padding: .1em;
+    }
+    .add-to-cart-checkmark {
+        // width: 100px;
+        position: absolute;
+        // border: 1px solid red;
+      
+    }
+
+}
+
+
+// CART PAGE
+#cart-contents {
+}
+#cart-totals {
+    font-size: 1.3em;
+    float: right;
+    
+}
+
+.cart-item {
+    width: 100%;
+    border: 1px solid #ccc;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    > * {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .image-div {
+        width: 100px;
+        .image {
+            width: 100%;
+        }
+    }    
+    .name {
+        flex: 1;
+    }
+    .price {
+        flex: 1;
+        color: green;
+        font-style: italic;
+        &:before { //insert dollar sign before all prices
+            content: "$"
+        }
+    }
+    .controls {
+        display: flex;
+        form {
+            display: flex;
+        }
+        .quantity-group {
+            label, select {
+                margin: 0;
+            }
+            label {
+                margin-right: .5em;
+            }
+        }
+        button {
+            margin-left: 1em;
+            border: none;
+            color: navy;
+            &:hover {
+                color: gray;
+            }
+        }
+    }
+
+    padding: 15px; 
+    margin-bottom: 1em;
+}
+.bottom-buttons {
+    width: 100%;
+    padding-top: 3em;
+    margin-top: 20px;
+    border-top: 2px solid black;
+    .cart-btn {
+        width: 100%;
+        border: 1px solid #ccc;
+        font-size: 1.7em;
+        &:hover {
+            background-color: lightskyblue;
+            color: white;
+            
+        }
+    }
+}
+
+#cart-contents {
+    width: 100%;
+    margin-bottom: 3em;
+}
+
+
+
+
+//USERS LIST PAGE
+
+.test {
+    display: flex;
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+        flex: 1;
+        flex-grow: 1;
+    }
+}
